@@ -1,1 +1,18 @@
 # TASK-TRACKER
+
+Video Demo: https://youtu.be/B2BpFoDFEIo
+Description: Task Tracker is a command-line application written in C designed to help users organize and manage their tasks. The primary goal of this project is to provide a simple, yet effective tool for adding, viewing, completing, and removing tasks. It supports task management with the option to set priorities and track completion status. Additionally, the program includes functionality to save tasks to a text file, allowing users to load their tasks even after exiting the application. This program is ideal for individuals looking for a straightforward task tracker without the complexity of overly sophisticated tools. The focus of this project is on implementing core programming concepts like file handling, user input validation, and managing tasks using structures.
+
+The project consists of several key features: • Add Task: Users can add tasks with a description, priority (high, medium, low), and a completion status. • View Tasks: Displays a list of all tasks with their ID, description, priority, and completion status. • Complete Task: Marks a task as completed by entering the task’s ID. • Delete Task: Removes a task from the list by its ID. • Clear All Tasks: Allows the user to delete all tasks at once. • Persistence: Tasks are saved to and loaded from a text file, ensuring that the data is not lost when the program is closed.
+
+Files: 1. project.c: This is the main file containing all the code for the program. It defines the Task structure, which holds the task’s details like ID, description, priority, and completion status. The program offers a text-based menu where users can choose to add, view, complete, delete, or clear tasks. The main() function coordinates the user’s input, calling the appropriate functions based on the user’s choice. 2. tasks.txt: This file is used to store tasks between sessions. It holds the data in a simple, text-based format, where each line represents a task. When the program starts, it loads the tasks from this file, and when the user exits, it saves the current list of tasks back into it. This ensures that all task data is persistent across different runs of the program.
+
+Design Choices:
+
+In this project, I opted to use a text file (tasks.txt) for storing task data rather than a more complex database system. This decision was driven by the simplicity of the project, where a file-based approach is sufficient and much easier to implement. It allows for task persistence without the overhead of dealing with external libraries or more advanced systems like SQLite.
+
+I also made the choice to implement the task list as a static array. While dynamic memory allocation could have been used, I decided against it in favor of simplicity and clarity. Since the task list is unlikely to exceed a certain size (in this case, 100 tasks), this static array approach avoids the complexities of memory management while keeping the code easy to understand.
+
+Future Improvements:
+
+Although the current version of Task Tracker meets the basic requirements of managing tasks, several improvements could be made in future iterations: • Dynamic Memory Management: Implementing a dynamic array or linked list would allow the program to handle an unlimited number of tasks. • Advanced Search: Adding more advanced search and filter options for tasks (by priority, completion status, or date) would make the program more useful for power users. • Graphical User Interface (GUI): Transitioning the program to a graphical interface using a framework like GTK or Qt would enhance usability and appeal to users who are not comfortable with command-line applications.
